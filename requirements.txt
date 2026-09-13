@@ -1,0 +1,18 @@
+#utilities
+numpy
+pandas 
+
+# Face Recognition
+Scikit-learn
+dlib-bin
+
+git+https://github.com/ageitgey/face_recognition_models  ##pip install a python package firectly from git repository
+setuptools< 70.0.0 ## helps to install a python package directly from a git repository 
+
+supabase 
+bcrypt
+
+segno 
+pillow
+
+streamlit
