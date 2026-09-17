@@ -1,7 +1,7 @@
 import streamlit as st
 
 def header_home():
-    logo_url="/app/static/header_logo.png"
+    logo_url="app/static/header_logo.png"
     st.markdown(f"""
 <style>
 .logo-img {{
@@ -27,7 +27,7 @@ def header_home():
 
 
 def header_dashboard():
-    logo_url="/app/static/header_logo.png"
+    logo_url="app/static/header_logo.png"
     st.markdown(f"""
    
 <div style="display:flex; align-items:center; justify-content:center; gap:0px">

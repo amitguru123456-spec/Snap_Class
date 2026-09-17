@@ -5,7 +5,6 @@ from src.screens.student_screen import student_screen
 from src.screens.teacher_screen import teacher_screen
 from src.components.dialog_auto_enroll import auto_enroll_dialog
 
-st.write("Static serving:", st.get_option("server.enableStaticServing"))
 
 def main():
     st.set_page_config(
