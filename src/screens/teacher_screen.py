@@ -11,6 +11,7 @@ import numpy as np
 from src.pipelines.face_pipeline import predict_attendance
 from src.database.config import supabase
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import pandas as pd 
 from src.components.dialog_attendance_results import attendance_results_dialog
 from src.components.dialog_voice_attendance import voice_attendance_dialog
@@ -199,7 +200,7 @@ def teacher_tab_attendance_records():
         ts=r.get("timestamp")
         data.append({
             "ts_group":ts.split(".")[0] if ts else None,
-            "Time":datetime.fromisoformat(ts).strftime("%Y-%m-%d %I:%M %p") if ts else "N'A",
+            "Time":datetime.fromisoformat(ts).astimezone(ZoneInfo("Asia/Kolkata")).strftime("%Y-%m-%d %I:%M %p") if ts else "N'A",
             "Subject":r["subjects"]["name"],
             "Subject_Code":r["subjects"]["subject_code"],
             "is_present":bool(r.get("is_present",False))
